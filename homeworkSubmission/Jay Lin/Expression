@@ -1,0 +1,82 @@
+# Write the boolean expression and finish the method for the following questions.
+
+1. public boolean cigarParty(int cigars, boolean isWeekend)
+   {
+        return cigars >= 40 && (isWeekend || cigars <= 60);
+   }
+}
+  
+
+
+2.  public int dateFashion(int you, int date)
+    if (you <= 2 || date <= 2)
+    {
+        return 0;
+    }
+   if (you >= 8 || date >= 8)
+    {
+        return 2;
+    }
+    else
+    {
+        return 1;
+    }
+
+
+
+3. public boolean squirrelPlay(int temp, boolean isSummer)
+   {
+       if (isSummer)
+       {
+           if (temp >= 60 && temp <= 100) 
+           {
+                return true;
+            } else 
+            {
+                return false;
+            }
+       }
+        if (temp >= 60 && temp <= 90) {
+            return true;
+        } else 
+            {
+            return false;
+        }
+    }
+}
+       
+
+
+4. public int caughtSpeeding(int speed, boolean isBirthday)
+   int a;
+   if (isBirthday) 
+   {
+        a = 5;
+   } else 
+   {
+        a = 0;
+   }
+
+   if (speed <= 60 + a) 
+   {
+        return 0;
+   } else if (speed <= 80 + a) 
+   {
+        return 1;
+    } else 
+    {
+        return 2;
+    }
+}
+   
+
+5. public boolean makeBricks(int small, int big, int goal)
+   {
+       if (small*1 + big*5 >= goal)
+       {
+           return true;
+       }
+       else{
+           return false;
+       }
+   }

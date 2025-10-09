@@ -1,0 +1,77 @@
+package castingPractice;
+
+public class BooleanPractice 
+{
+    public static boolean cigarParty(int cigars, boolean weekend) {
+        if (weekend) {
+            return cigars >= 40;
+        } else {
+            return cigars >= 40 && cigars <= 60;
+        }
+    }
+
+    public static int dateFashion(int you, int date) {
+        if (you <= 2 || date <= 2) {
+            return 0;
+        } else if (you >= 8 || date >= 8) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+
+    public static boolean squirrelPlay(int temperature, boolean summer) {
+        int maxTemp = summer ? 100 : 90;
+        return temperature >= 60 && temperature <= maxTemp;
+    }
+
+    public static int caughtSpeeding(int speed, boolean birthday) {
+        int bonus = birthday ? 5 : 0;
+
+        if (speed <= 60 + bonus) {
+            return 0;
+        } else if (speed <= 80 + bonus) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+
+    public static boolean makeBricks(int small, int big, int goal) {
+        int maxBigNeeded = goal / 5;
+        int bigUsed = Math.min(big, maxBigNeeded);
+        int leftOver = goal - bigUsed * 5;
+        return small >= leftOver;
+    }
+
+    public static String makeOutWord(String wrapper, String word) {
+        String front = wrapper.substring(0, 2);
+        String end = wrapper.substring(2);
+        return front + word + end;
+    }
+
+    public static String withoutEnd(String text) {
+        return text.substring(1, text.length() - 1);
+    }
+
+    public static boolean hasBad(String text) {
+        if (text.length() >= 3 && text.substring(0, 3).equals("bad")) {
+            return true;
+        }
+        if (text.length() >= 4 && text.substring(1, 4).equals("bad")) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("cigarParty(50, false) → " + cigarParty(50, false));
+        System.out.println("dateFashion(5, 10) → " + dateFashion(5, 10));
+        System.out.println("squirrelPlay(95, true) → " + squirrelPlay(95, true));
+        System.out.println("caughtSpeeding(65, false) → " + caughtSpeeding(65, false));
+        System.out.println("makeBricks(3, 1, 8) → " + makeBricks(3, 1, 8));
+        System.out.println("makeOutWord(\"<<>>\", \"Yay\") → " + makeOutWord("<<>>", "Yay"));
+        System.out.println("withoutEnd(\"Hello\") → " + withoutEnd("Hello"));
+        System.out.println("hasBad(\"xbadxx\") → " + hasBad("xbadxx"));
+    }
+}
