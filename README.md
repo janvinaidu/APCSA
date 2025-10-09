@@ -1,4 +1,4 @@
-# APCSA
+# APCSA  @copyright 
 
 # 1. Follow the instructions for dev.
 1. fork the repo to your account. I will update the repo for problems.

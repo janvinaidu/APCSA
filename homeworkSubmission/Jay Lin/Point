@@ -1,0 +1,43 @@
+public class Point
+{
+    private int x;
+    private int y;
+    private int dx;
+    private int dy;
+    
+
+    public Point() 
+    {
+        x = 0;
+        y = 0;
+    }
+
+
+    public Point(int xOne, int yOne) 
+    {
+        x = xOne;
+        y = yOne;
+    }
+    
+    public int getX()
+    {
+        return x;
+    }
+
+    public int getY()
+    {
+        return y;
+
+
+    public void translate(int dx, int dy) 
+    {
+        x += dx;
+        y += dy;
+    }
+  
+    public String toString() 
+    {
+        return "x = " + x + ", y = " + y;
+    
+    }
+}
